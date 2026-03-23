@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор погашения ипотеки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+ rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="card">
+
+        <div class="calculator">
+            <div class="name">
+                <span class="name-span">Mortgage Calculator</span>
+                <span class="reset">Clear All</span>
+            </div>
+            
+            <div class="amount-block">
+                <span class="mortage-amount">Mortage Amount</span>
+
+                <div class="input-amount">
+                    <div class="currency">£</div>
+                    <input class="number-amount" type="number" placeholder="" maxlength="6">
+                </div>
+                <span class="error-text">The field is required</span>
+            </div>
+
+            <div class="twoblock">
+
+                <div class="years-block">
+                    <span class="mortage-amount">Mortage Term</span>
+                    <div class="input-years">
+                        <input class="twoblock-input years" type="number" placeholder="" maxlength="6">
+                        <div class="years-text">years</div>
+                    </div>
+                    <span class="error-text">The field is required</span>
+                </div>
+
+                <div class="rate-block">
+                    <span class="mortage-amount">Interest Rate</span>
+                    <div class="input-rate">
+                        <input class="twoblock-input rate" type="number" placeholder="" maxlength="6">
+                        <div class="procent">%</div>
+                    </div>
+                    <span class="error-text">The field is required</span>
+                </div>
+            </div>
+
+            <div class="mortage-type">
+                <span class="mortage-amount">Mortage Type</span>
+
+                <label class="type-element">
+                    <input type="radio" name="loanType" value="repayment">
+                    <span>Repayment</span>
+                </label>
+
+                <label class="type-element">
+                    <input type="radio" name="loanType" value="interest">
+                    <span>Interest Only</span>
+                </label>
+
+                <span class="error-text">The field is required</span>
+
+            </div>
+            <button type="button" class="button-calculate">
+                <img src="images/icon-calculator.svg" alt="icon-calculator">
+                <span>Calculate Repayments</span>
+            </button>
+
+        </div>
+
+
+        <div class="result">
+            <img src="images/illustration-empty.svg" alt="illustration-empty" class="illustration-empty">
+            <h2>Results shown here</h2>
+            <span>Complete the form and click “calculate repayments” to see what 
+                your monthly repayments would be.</span>
+        </div>
+
+        <div class="your-result">
+            <h2>Your results</h2>
+            <span>Your results are shown below based on the information you provided. 
+                To adjust the results, edit the form and click “calculate repayments” again.</span>
+                <div class="repayment">
+                    <span>Your monthly repayments</span>
+                    <span class="result-repayment">£0.00</span>
+                    <hr>
+                    <span>Total you'll repay over the term</span>
+                    <span class="result-summa">£0.00</span>
+
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

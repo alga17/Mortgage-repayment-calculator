@@ -1,0 +1,309 @@
+:root {
+    --Lime: hsl(61, 70%, 52%);
+    --Red: hsl(4, 69%, 50%);
+    --Slate-100: hsl(202, 86%, 94%);
+    --Slate-300: hsl(203, 41%, 72%);
+    --Slate-500: hsl(200, 26%, 54%);
+    --Slate-700: hsl(200, 24%, 40%);
+    --Slate-900: hsl(202, 55%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Slate-100);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+input, button, textarea, select {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+.card {
+    display: flex;
+    width: 1000px;
+    min-height: 600px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.calculator {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 40px;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 150px;
+    width: 50%;
+    background-color: var(--Slate-900);
+    border-radius: 0 20px 20px 100px;
+}
+
+.repayment {
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 10px;
+    border-top: 4px solid var(--Lime);
+    margin-top: 40px;
+    width: 100%;
+    height: 290px;
+    background-color: hsl(201, 62%, 8%);
+    color: var(--Slate-500);
+}
+
+
+.your-result {
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 50%;
+    background-color: var(--Slate-900);
+    border-radius: 0 20px 20px 100px;
+}
+
+.your-result.active {
+    display: flex;
+}
+
+.result.none {
+    display: none;
+}
+
+hr {
+    margin: 30px 0;
+    opacity: 0.2;
+}
+
+.result-repayment {
+    font-size: 45px;
+    color: var(--Lime);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.result-summa {
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.your-result > h2 {
+    color: white;
+    font-weight: 600;
+}
+
+.your-result > span {
+    color: var(--Slate-500);
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.name-span {
+    font-size: 20px;
+    color: var(--Slate-900);
+    font-weight: 600;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 30%;
+    margin-bottom: 50px;
+}
+
+.reset {
+    color: var(--Slate-500);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mortage-amount {
+    font-weight: 600;
+    color: var(--Slate-500);
+}
+
+.mortage-type {
+    margin-top: 30px;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input-amount, .input-rate, .input-years{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--Slate-300);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 100%;
+    height: 45px;
+}
+
+.currency, .procent, .years-text {
+    display: flex;
+    background-color: var(--Slate-100);
+    color: var(--Slate-700);
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 60px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.procent {
+    width: 100px;
+}
+
+.years-text {
+    width: 150px;
+}
+
+
+.input-amount input::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twoblock {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.years-block {
+    width: 50%;
+}
+
+.rate-block {
+    width: 50%;
+}
+
+.twoblock-input {
+    width: 100%;
+    height: 45px;
+}
+
+.type-element {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--Slate-300);
+    border-radius: 6px;
+    color: var(--Slate-900);
+    font-weight: 700;
+}
+
+.type-element > input {
+    width: 20px;
+    margin: 0 20px 0 20px;
+}
+
+.button-calculate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    height: 55px;
+    width: 310px;
+    color: var(--Slate-900);
+    font-size: 20px;
+    font-weight: 600;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--Lime);
+}
+
+.illustration-empty {
+    height: 165px;
+}
+
+.result > h2 {
+    margin-top: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.result > span {
+    margin: 15px 20px 0 20px;
+    text-align: center;
+    color: var(--Slate-300);
+}
+
+.input-amount:hover, .input-rate:hover, .input-years:hover, .type-element:hover{
+    border-color: var(--Slate-900);
+}
+
+.input-amount:focus, .input-rate:focus, .input-years:focus{
+    border: 3px solid var(--Lime);
+}
+
+
+.input-amount:focus-within .currency, 
+.input-rate:focus-within .procent, 
+.input-years:focus-within .years-text{
+    background-color: var(--Lime);
+    color: var(--Slate-900);
+}
+
+.input-amount:focus-within, .input-rate:focus-within, .input-years:focus-within{
+    border-color: var(--Lime);
+}
+
+.type-element:has(input:checked) {
+    border-color: var(--Lime);
+    background-color: rgba(128, 255, 0, 0.05); 
+}
+
+.error-text {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.error-text.active {
+    display: block;
+}
